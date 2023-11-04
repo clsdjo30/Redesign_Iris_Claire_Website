@@ -16,7 +16,31 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+Route::get('/team', function () {
+    return view('team');
+})->name('team');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::get('/mentions-legales', function () {
+    return view('mentions-legales');
+})->name('mentions-legales');
+
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/conditions-generales-de-ventes', function () {
+    return view('conditions-generales-de-ventes');
+})->name('conditions-generales-de-ventes');
+
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
