@@ -14,4 +14,9 @@ class Post extends Model
         return $this->belongsTo(Auteur::class);
     }
 
+    public function categories(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
 }
