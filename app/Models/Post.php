@@ -9,6 +9,9 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'slug', 'auteur_id', 'excerpt', 'content', 'thumbnail', 'is_ahead', 'alt_description'];
+
+
     public function auteur(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Auteur::class);

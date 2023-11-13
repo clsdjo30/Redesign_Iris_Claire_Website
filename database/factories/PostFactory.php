@@ -30,6 +30,7 @@ class PostFactory extends Factory
             'auteur_id' => Auteur::all()->random()->id,
             'content' => $content,
             'thumbnail' => fake()->imageUrl,
+            'is_ahead' => fake()->boolean(10),
             'alt_description' => fake()->sentence(4),
             'created_at' => $createdAt,
             'updated_at' => $createdAt,

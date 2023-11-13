@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('excerpt');
             $table->text('content');
             $table->string('thumbnail');
+            $table->boolean('is_ahead');
             $table->string('alt_description', 150);
             $table->timestamps();
         });
