@@ -2,59 +2,207 @@
 
 @section('content')
 
-        <h1 class="w-full text-3xl text-center">  Le Blog d'Iris Claire </h1>
-<div class="w-full flex justify-center px-12 mt-12">
+    <div class="flex flex-col justify-center  gap-4 py-12">
+        <h1 class="w-full text-5xl text-purple-600 font-bold text-center "> Le Blog d'Iris Claire </h1>
+        <h2 class="text-center text-2xl text-purple-900 font-thin text-center "> Tous les sujets du moment sur notre blog : astrologie, horoscope,
+            spiritualité, rituel, développement personnel…</h2>
+    </div>
+    <div class="w-full flex flex-col lg:flex-row justify-center lg:px-12 lg:py-12 pt-6 lg:mt-12 bg-purple-50">
 
-    <section class="w-3/4 mx-12 ">
-       <header class="pb-12">
-           <!-- Top Post-->
-           <section class="w-full h-44 bg-gray-500 flex justify-center items-center">
-               1
-           </section>
-           <!--End top Post-->
-           <!-- Bottom Two post-->
-           <section class="w-full flex flex-row gap-4 mt-4">
-               <div class="w-full h-44 bg-gray-500 flex justify-center items-center">2</div>
-               <div class="w-full h-44 bg-gray-500 flex justify-center items-center">3</div>
-           </section>
-           <!--End Of Bottom Two post-->
-       </header>
-        <section class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="space-y-10 md:space-y-16">
+        <section class="w-full lg:w-8/12">
+            <header class="pb-6 lg:pb-12">
+                <!-- Top Post-->
+                <section class="w-full">
+                    @foreach($posts as $post)
+                        @if($post->is_ahead === 1)
+                            <article class=" h-3/4 border border-violet-900 flex flex-col justify-center rounded-xl p-5 mx-5
+                             overflow-hidden transition-transform mt-5">
+                                <div class="w-full relative">
+                                    <img
+                                        src="{{ asset('storage/' . $post->thumbnail) }}"
+                                        alt="{{  $post->alt_description}}"
+                                        class="object-cover object-top  rounded-t-lg"
+                                    />
+                                    @foreach($categories as $category)
+                                        <div
+                                            class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
+                                            {{ $category->name }}
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <div class="w-full relative mt-3 flex flex-col justify-start">
+                                    <div class="relative w-full ">
+                                        <h2 class="lg:text-4xl font-bold text-violet-800">{{$post->title}}</h2>
+                                        <p class="text-sm lg:text-lg font-light mt-3 text-violet-900">{{$post->excerpt}}</p>
+                                    </div>
+                                    <div class="w-full">
+                                        <button
+                                            class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
+                                            <a href={`/blog/${categorySlug}/${slug}`} class="text-sm">
+                                                Lire la suite
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
+                </section>
+                <!--End top Post-->
+                <!-- Bottom Two post-->
+                <section class="w-full flex flex-col lg:flex-row gap-4 mt-4">
+                    @foreach($posts as $post)
+                        @if($post->is_second === 1)
+                            <article class="border border-violet-900 flex flex-col lg:flex-row justify-center items-center rounded-xl p-5 mx-5 md:4/6
+                overflow-hidden transition-transform h-auto mt-5">
+                                <div class="relative lg:w-1/2 ">
+                                    <img
+                                        src="{{ Storage::url($post->thumbnail) }}"
+                                        alt="{{  $post->alt_description}}"
+                                        class="object-cover object-top h-54 lg:h-48 rounded-t-lg"
+                                    />
+                                    <div
+                                        class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
+                                        @foreach($categories as $category)
+                                            {{ $category->name }}
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <div class="mt-3 lg:w-1/2 flex flex-col justify-start items-center">
+                                    <div>
+                                        <h2 class="text-base font-bold text-violet-800">{{$post->title}}</h2>
+                                        <p class="text-sm font-light mt-3 text-violet-900">{{$post->excerpt}}</p>
+                                    </div>
+                                    <div class="w-full">
+                                        <button
+                                            class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
+                                            <a href={`/blog/${categorySlug}/${slug}`} class="text-sm">
+                                                Lire la suite
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
+
+                </section>
+                <!--End Of Bottom Two post-->
+            </header>
+            <section class="grid grid-cols-1 gap-4 mt-10">
+                <hr class="w-1/2 place-self-center bg-violet-900"/>
+                <h3 class=" text-center text-2xl font-bold text-violet-800">
+                    Tous nos articles
+                </h3>
+
+
                 @foreach($posts as $post)
                     {{-- Début du post --}}
-                    <article class="flex flex-col lg:flex-row pb-10 md:pb-16 border-b">
-                        <div class="lg:w-5/12">
-                            <img class="w-full max-h-72 object-cover lg:max-h-none lg:h-full" src="{{ $post->thumbnail }}" alt="{{ $post->alt_description }}">
+                    <article class="border border-violet-900 flex flex-col lg:flex-row justify-center items-center rounded-xl p-5 mx-5 md:4/6
+                overflow-hidden transition-transform h-auto mt-5">
+                        <div class="relative lg:w-1/2 ">
+                            <img
+                                src="{{ asset('storage/' . $post->thumbnail) }}"
+                                alt="{{  $post->alt_description}}"
+                                class="object-cover object-top h-54 lg:h-48 rounded-t-lg"
+                            />
+                            @foreach($categories as $category)
+                                <div class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
+                                    {{ $category->name }}
+                                </div>
+                            @endforeach
                         </div>
-                        <div class="flex flex-col items-start mt-5 space-y-5 lg:w-7/12 lg:mt-0 lg:ml-12">
-                            <a href="" class="underline font-bold text-slate-900 text-lg">Catégorie</a>
-                            <h1 class="font-bold text-slate-900 text-3xl lg:text-5xl leading-tight">{{ $post->title }}</h1>
-                            <ul class="flex flex-wrap gap-2">
-                                <li><a href="" class="px-3 py-1 bg-indigo-700 text-indigo-50 rounded-full text-sm">Tag 1</a></li>
-                                <li><a href="" class="px-3 py-1 bg-indigo-700 text-indigo-50 rounded-full text-sm">Tag 2</a></li>
-                            </ul>
-                            <p class="text-xl lg:text-2xl text-slate-600">
-                                {{ $post->excerpt }}
-                            </p>
-                            <a href="" class="flex items-center py-5 px-7 font-semibold bg-slate-900 transition text-slate-50 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                </svg>
-                                Lire l'article
-                            </a>
+                        <div class="mt-3 lg:w-1/2 flex flex-col justify-start items-center">
+                            <div>
+                                <h2 class="text-base font-bold text-violet-800">{{$post->title}}</h2>
+                                <p class="text-sm font-light mt-3 text-violet-900">{{$post->excerpt}}</p>
+                            </div>
+                            <div class="w-full">
+                                <button
+                                    class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
+                                    <a href={`/blog/${categorySlug}/${slug}`} class="text-sm">
+                                        Lire la suite
+                                    </a>
+                                </button>
+                            </div>
                         </div>
                     </article>
                     {{-- Fin du post --}}
                 @endforeach
-            </div>
+
+            </section>
         </section>
-    </section>
-    <aside class="w-1/4 mx-4">
-        <div class="h-full bg-indigo-50">menu coté</div>
-    </aside>
-</div>
+        <section class="lg:w-3/12 justify-center lg:ml-24 px-6 pb-12 lg:px-12 ">
 
+            <aside class=" flex flex-col mt-10 lg:mt-5">
+                <!-- bloc Last Post -->
+                <div
+                    class="flex flex-col bg-purple-100 px-2 py-3 rounded-md border mb-10">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-3 ml-4">
+                        Articles Recents
+                    </h3>
+                    @foreach ($latestPosts as $post)
+                        <div class="mb-3">
+                            <!-- Affichage de chaque post -->
+                            <ul class="list-disc ml-8 my-1">
+                                <li class="text-base font-regular text-purple-900 hover:text-orange-500">
+                                    <a href="">
+                                        {{ $post->title }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endforeach
 
+                </div>
+                <!-- banniere pub iris -->
+                <div class="w-full px-2 md:px-3">
+                    <div
+                        class="bg-gradient-to-r from-violet-700 from-10% via-violet-800 to-violet-900 to-70% py-3 px-2 rounded-md">
+                        <h3 class="mt-10 text-xl font-bold text-violet-100 text-center">
+                            Votre compagnon divinatoire personnalisé
+                        </h3>
+                        <div class="w-full h-full mt-10">
+                            <img src="{{asset('images/header.png')}}" alt="Application Iris claire sur mobile" class="object-cover h-64"/>
+                        </div>
+                        <div class="mb-6">
+                            <p class="text-sm mt-4 text-violet-200 max-w-xl text-justify">
+                                Plongez dans votre avenir et découvrez les mystères qui
+                                l'entourent ! Vous obtiendrez des réponses qui vont aideront à
+                                mieux vous comprendre et à prendre des décisions.
+                            </p>
+                            <div class="w-full mt-20 flex flex-col gap-5">
+                                <button
+                                    class="flex mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-2 px-16 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
+                                    App Store
+                                </button>
+                                <button
+                                    class="flex mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-2 px-16 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
+                                    Play Store
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- bloc Category -->
+                <div
+                    class="flex flex-col bg-purple-100 px-2 py-3 rounded-md border mt-10">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-3 ml-1">
+                        Catégories
+                    </h3>
+                    @foreach($categories as $category)
+                        <ul class="list-disc ml-8 my-1">
+                            <li class="text-md font-light text-purple-900 hover:text-orange-500">
+                                <a href="" }>
+                                    {{ $category->name}}
+                                </a>
+                            </li>
+                        </ul>
+                    @endforeach
+                </div>
+            </aside>
+
+        </section>
+    </div>
 
 @endsection

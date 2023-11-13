@@ -96,10 +96,17 @@
                                                             <x-text-input id="is_ahead" class=""
                                                                           type="checkbox"
                                                                           name="is_ahead"
-                                                                          required
                                                                           autofocus
                                                                           value="0"
                                                             />
+
+                                                        <x-input-label for="is_second" :value="__('Mettre en second')" class="ml-3 mr-3"/>
+                                                        <x-text-input id="is_second" class=""
+                                                                      type="checkbox"
+                                                                      name="is_second"
+                                                                      autofocus
+                                                                      value="0"
+                                                        />
 
                                                     </div>
                                                     <!--End is Ahead-->

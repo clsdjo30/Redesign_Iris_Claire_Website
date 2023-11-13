@@ -36,30 +36,33 @@ class AdminController extends Controller
     }
 
 
-
     public function store(Request $request): RedirectResponse
     {
         $validatedData = $request->validate([
             'title' => 'required|max:150',
             'slug' => 'required|unique:posts',
-            'auteur_id' => 'required|exists:auteurs,id', // Assurez-vous que l'auteur existe
+            'auteur_id' => 'required|exists:auteurs,id',
             'excerpt' => 'required',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'content' => 'required',
-            'is_ahead' => 'required|boolean',
+            'is_ahead' => 'sometimes|boolean',
+            'is_second' => 'sometimes|boolean',
             'alt_description' => 'required|max:150',
         ]);
-
-        Post::create($validatedData);
 
         if ($request->hasFile('thumbnail')) {
             $filename = $request->file('thumbnail')->store('thumbnails', 'public');
             $validatedData['thumbnail'] = $filename;
         }
 
-        return redirect()->route('admin.post.index');
+        $validatedData['is_ahead'] = $request->has('is_ahead');
+        $validatedData['is_second'] = $request->has('is_second');
 
+        Post::create($validatedData);
+
+        return redirect()->route('admin.post.index');
     }
+
 
 
     /**
