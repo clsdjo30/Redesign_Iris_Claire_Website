@@ -38,7 +38,7 @@
                                     <div class="w-full">
                                         <button
                                             class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
-                                            <a href={`/blog/${categorySlug}/${slug}`} class="text-sm">
+                                            <a href="{{ route('blog.show', $post) }}" class="text-sm">
                                                 Lire la suite
                                             </a>
                                         </button>
@@ -76,7 +76,7 @@
                                     <div class="w-full">
                                         <button
                                             class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
-                                            <a href={`/blog/${categorySlug}/${slug}`} class="text-sm">
+                                            <a href="{{ route('blog.show', $post) }}" class="text-sm">
                                                 Lire la suite
                                             </a>
                                         </button>
@@ -120,7 +120,7 @@
                             <div class="w-full">
                                 <button
                                     class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
-                                    <a href={`/blog/${categorySlug}/${slug}`} class="text-sm">
+                                    <a href="{{ route('blog.show', $post) }}" class="text-sm">
                                         Lire la suite
                                     </a>
                                 </button>
@@ -146,7 +146,7 @@
                             <!-- Affichage de chaque post -->
                             <ul class="list-disc ml-8 my-1">
                                 <li class="text-base font-regular text-purple-900 hover:text-orange-500">
-                                    <a href="">
+                                    <a href="{{ route('blog.show', $post) }}">
                                         {{ $post->title }}
                                     </a>
                                 </li>

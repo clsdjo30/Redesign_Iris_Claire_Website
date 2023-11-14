@@ -32,3 +32,47 @@
     /* Apply class bg-indigo-700 */
     background-color:#A855F7;
 }
+/*Mise forme de l'article de blog*/
+#description p {
+    color: #4C1D95;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+#post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 90%
+}
+#post-content h2 {
+    color: #A855F7;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+#post-content p {
+    color: #4C1D95;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+.social-share-buttons a {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+}
+
+.add-like {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+}
+

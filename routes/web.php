@@ -44,6 +44,9 @@ Route::get('/conditions-generales-de-ventes', function () {
 /* Blog Section */
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
+Route::get('/blog/{post}', [PostController::class, 'show'])->name('blog.show');
+Route::post('/blog/{post}/like', [PostController::class, 'like'])->name('blog.like');
+Route::post('/blog/{post}/unlike', [PostController::class, 'unlike'])->name('blog.unlike');
 
 
 /* Dashboard Section */

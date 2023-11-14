@@ -56,6 +56,25 @@
         }
 
     </script>
+    <!--Like-->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let form = this;
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Mettez à jour le compteur de "J'aime" ici
+                    document.getElementById('like-count').innerText = data.like_count;
+                });
+        });
+    </script>
 
 </head>
 <body class="antialiased">
@@ -64,5 +83,6 @@
     @yield('content')
 </main>
 @include('home/footer')
+
 </body>
 </html>
