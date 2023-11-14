@@ -56,10 +56,11 @@
         }
 
     </script>
+
 </head>
 <body class="antialiased">
 @include('home/navigation')
-<main>
+<main class="bg-purple-100 px-3 lg:px-24">
     @yield('content')
 </main>
 @include('home/footer')
