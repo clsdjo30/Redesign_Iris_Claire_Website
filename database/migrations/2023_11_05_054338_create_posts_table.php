@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title', 150);
             $table->string('slug')->unique();
             $table->foreignId('auteur_id')->constrained();
-            $table->string('excerpt');
+            $table->string('excerpt', length: 160);
             $table->text('content');
             $table->string('thumbnail');
             $table->boolean('is_ahead');
