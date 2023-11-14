@@ -129,7 +129,9 @@
                     </article>
                     {{-- Fin du post --}}
                 @endforeach
-
+                <div class="mt-8">
+                    {{ $posts->links() }}
+                </div>
             </section>
         </section>
         <section class="lg:w-3/12 justify-center lg:ml-24 px-6 pb-12 lg:px-12 ">

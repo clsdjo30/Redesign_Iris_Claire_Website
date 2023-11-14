@@ -15,7 +15,7 @@
          */
         public function index()
         {
-            $posts = Post::all();
+            $posts = Post::paginate(5);
             $latestPosts = Post::latest()->take(5)->get();
             $categories = Category::all();
 
