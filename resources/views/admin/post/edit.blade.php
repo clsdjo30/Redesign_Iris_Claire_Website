@@ -88,16 +88,15 @@
 
                                                         </div>
                                                         <div class="w-full flex flex-col">
-                                                            <x-input-label for="slug" :value="__('Categorie de l\'article')" class="mb-3"/>
-                                                            <select name="category_id">
-                                                                @dump($post->category)
-                                                                @foreach(App\Models\Category::all() as $category)
-                                                                    <option
-                                                                        value="{{ $category->id }}" {{ $post->category_id == $category->id ? 'selected' : '' }}>
-                                                                        {{ $category->name }}
-                                                                    </option>
-                                                                @endforeach
-                                                            </select><br>
+                                                            <x-input-label for="category_id" :value="__('Categorie de l\'article')" class="mb-3"/>
+                                                                <select name="category_id">
+                                                                    @foreach(App\Models\Category::all() as $category)
+                                                                        <option
+                                                                            value="{{ $category->id }}" {{ $post->category_id == $category->id ? 'selected' : '' }}>
+                                                                            {{ $category->name }}
+                                                                        </option>
+                                                                    @endforeach
+                                                                </select>
                                                         </div>
                                                     </div>
                                                     <!--end Post Category & Auteur-->

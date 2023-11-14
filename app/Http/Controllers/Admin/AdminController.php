@@ -22,8 +22,9 @@ class AdminController extends Controller
      */
     public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
+        $posts = Post::with('categories')->get();
         return view('admin.post.index', [
-            'posts' => Post::all()
+            'posts' => $posts
         ]);
     }
 
@@ -97,6 +98,9 @@ class AdminController extends Controller
         ]);
 
         $post->update($validatedData);
+        $categoryIds = $request->input('category_id');
+        $post->categories()->attach($categoryIds);
+
 
         return redirect()->route('admin.post.index');
     }

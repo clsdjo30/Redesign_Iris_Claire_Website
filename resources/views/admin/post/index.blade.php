@@ -31,7 +31,8 @@
                             <table class="w-full text-md bg-white shadow-md rounded mb-4">
                                 <tbody>
                                 <tr class="border-b">
-                                    <th class="text-left p-3 px-5">Titre</th>
+                                    <th class="text-left p-3 px-5">Catégorie</th>
+                                    <th class="text-center p-3 px-5">Titre</th>
                                     <th class="text-center p-3 px-5">Mis en Avant</th>
                                     <th class="text-center p-3 px-5">Mis en Second</th>
 
@@ -40,7 +41,18 @@
                                 @foreach( $posts as $post)
 
                                 <tr class=" even:bg-purple-100 border-b hover:bg-orange-100">
-                                    <td class="p-3 px-5">{{ $post->title }}</td>
+                                    <td class="p-3 px-5">
+                                        @if($post->category)
+                                            {{ $post->category->name }} <!-- Pour une relation belongsTo -->
+                                        @endif
+
+                                        @if($post->categories) <!-- Pour une relation belongsToMany -->
+                                        @foreach($post->categories as $category)
+                                            {{ $category->name }}
+                                        @endforeach
+                                        @endif
+                                    </td>
+                                    <td class="p-3 text-left px-5">{{ $post->title }}</td>
                                     <td class="p-3 text-center px-5">
                                         @if($post->is_ahead)
                                             <button type="button"
@@ -58,6 +70,7 @@
                                         @endif
 
                                     </td>
+
                                     <td class="p-3 text-center px-5">
                                         @if($post->is_second)
                                             <button type="button"
