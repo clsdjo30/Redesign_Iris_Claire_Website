@@ -56,6 +56,7 @@
         }
 
     </script>
+
 </head>
 <body class="antialiased">
 @include('home/navigation')

@@ -5,8 +5,8 @@
         </h2>
     </x-slot>
 
-    <div class="px-20">
-        <div class="px-2 py-12">
+    <div class="lg:px-20">
+        <div class="px-2 lg:py-12">
             <div class="">
                 <div class="">
                     @if ($errors->any())
@@ -22,18 +22,18 @@
                     @endif
                     <div class="w-full py-4 px-2">
                         <div class="bg-purple-200 rounded shadow mt-7 py-7">
-                            <div class="hidden lg:block md:hidden">
+                            <div class="block">
                                 <div
                                     class="px-7 header flex bg-purple-200 lg:justify-around md:justify-around justify-start py-[30px] border-b-[2px]
                                     border-slate-100 flex-wrap gap-x-4"
                                 >
-                                    <div class="w-10/12 flex flex-no-wrap items-start">
+                                    <div class="w-10/12 flex flex-col lg:flex-row lg:flex-no-wrap items-start">
                                         <div class="w-full">
                                             <div class="py-4 px-2">
                                                 <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     <!--Start Post Title & Description-->
-                                                    <div class="w-full flex justify-between gap-6">
+                                                    <div class="w-full flex flex-col lg:flex-row justify-between gap-6">
                                                         <div class="w-full flex flex-col">
                                                             <!--Post Title-->
                                                             <x-input-label for="title" :value="__('Titre SEO de l\'article')"/>
@@ -54,6 +54,7 @@
                                                                         autofocus
 
                                                             ></x-textarea>
+                                                            <div id="excerptCounter" class="text-gray-600 mt-2">0/160 caractères</div>
                                                         </div>
                                                     </div>
                                                     <!--End Post Title & Description -->
@@ -90,15 +91,15 @@
                                                     </div>
                                                     <!--end Post Category & Auteur-->
                                                     <!--Start Is Ahead-->
-                                                    <div class="w-3/12 flex my-5">
+                                                    <div class="lg:w-3/12 flex my-5">
 
-                                                            <x-input-label for="is_ahead" :value="__('Mettre en avant')" class="mr-3"/>
-                                                            <x-text-input id="is_ahead" class=""
-                                                                          type="checkbox"
-                                                                          name="is_ahead"
-                                                                          autofocus
-                                                                          value="0"
-                                                            />
+                                                        <x-input-label for="is_ahead" :value="__('Mettre en avant')" class="mr-3"/>
+                                                        <x-text-input id="is_ahead" class=""
+                                                                      type="checkbox"
+                                                                      name="is_ahead"
+                                                                      autofocus
+                                                                      value="0"
+                                                        />
 
                                                         <x-input-label for="is_second" :value="__('Mettre en second')" class="ml-3 mr-3"/>
                                                         <x-text-input id="is_second" class=""
@@ -112,27 +113,25 @@
                                                     <!--End is Ahead-->
 
                                                     <!-- Start Post Image + description alt-->
-                                                    <div class="w-full flex justify-between items-center gap-6 my-5">
+                                                    <div class="w-full my-5 flex flex-col lg:flex-row flex-wrap justify-between gap-6">
                                                         <div class="w-full ">
                                                             <!-- Post Image -->
-                                                            <x-input-label for="thumbnail" :value="__('Choisir une image')"class="pb-3"/>
-                                                            <x-text-input id="thumbnail"
+                                                            <x-input-label for="thumbnail" :value="__('Choisir une image')" class="pb-3"/>
+                                                            <input id="thumbnail"
                                                                           type="file"
                                                                           name="thumbnail"
                                                                           required
                                                                           autofocus
-                                                                          class="relative m-0 w-full min-w-0 flex-auto rounded border border-solid
-                                                                          border-neutral-300 bg-clip-padding px-3  text-base font-normal
-                                                                          text-neutral-700 transition duration-300 ease-in-out file:-mx-3
-                                                                          file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0
-                                                                          file:border-solid file:border-inherit file:bg-purple-500 file:px-3
-                                                                          file:py-[0.32rem] file:text-purple-50 file:transition file:duration-150
-                                                                          file:ease-in-out file:[border-inline-end-width:1px]
-                                                                          file:[margin-inline-end:0.75rem] hover:file:bg-purple-200
-                                                                          focus:border-purple-600 focus:text-purple-600 focus:shadow-te-primary
-                                                                          focus:outline-none file:hover:bg-purple-300 file:hover:text-purple-600"
+
                                                             />
 
+                                                        </div>
+                                                        <!-- Zone d'affichage pour le nom, la miniature et le poids de l'image -->
+                                                        <div id="image-info" claa="w-1/3">
+                                                            <img id="image-preview" src="#" alt="Aperçu de l'image" style="display: none;
+                                                            max-width: 300px; max-height: 300px;">
+                                                            <p id="image-name">Nom de l'image : Aucune image choisie</p>
+                                                            <p id="image-size">Taille de l'image : 0 Ko</p>
                                                         </div>
                                                         <div class="w-full flex flex-col">
                                                             <!-- Post Alt Description-->
@@ -145,6 +144,7 @@
                                                             />
 
                                                         </div>
+
                                                     </div>
                                                     <!-- End Post Image + description alt-->
                                                     <!-- Start Post Content-->
@@ -159,8 +159,9 @@
                                                     </div>
                                                     <!-- End Post Content-->
 
-
-                                                    <x-primary-button type="submit">Créer le post</x-primary-button>
+                                                    <div class="w-full flex justify-end pt-6">
+                                                        <x-primary-button type="submit">Créer le post</x-primary-button>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
@@ -175,7 +176,6 @@
     </div>
 
 
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const titleInput = document.getElementById('title');
@@ -184,7 +184,7 @@
             function slugify(text) {
                 // Normalisation des caractères accentués
                 const from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç";
-                const to   = "aaaaaeeeeeiiiiooooouuuunc";
+                const to = "aaaaaeeeeeiiiiooooouuuunc";
                 const regex = new RegExp(from.split('').join('|'), 'gi');
 
                 let slug = text.replace(regex, function (match) {
@@ -199,6 +199,52 @@
 
             titleInput.addEventListener('input', function () {
                 slugInput.value = slugify(this.value);
+            });
+        });
+    </script>
+    <!--Compteur de caractere-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const excerptInput = document.getElementById('excerpt');
+            const excerptCounter = document.getElementById('excerptCounter');
+
+            excerptInput.addEventListener('input', function () {
+                const textLength = this.value.length;
+                excerptCounter.textContent = `${textLength}/160 caractères`;
+
+                if (textLength > 160) {
+                    excerptCounter.style.color = 'red';
+                } else {
+                    excerptCounter.style.color = 'gray';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageInput = document.getElementById('thumbnail');
+            const imageName = document.getElementById('image-name');
+            const imagePreview = document.getElementById('image-preview');
+            const imageSize = document.getElementById('image-size');
+
+            imageInput.addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    // Afficher le nom de l'image
+                    imageName.textContent = "Nom de l'image : "+ this.files[0].name;
+
+                    // Afficher la miniature
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        imagePreview.src = e.target.result;
+                        imagePreview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(this.files[0]);
+
+                    // Afficher la taille de l'image
+                    const sizeInKB = this.files[0].size / 1024;
+                    imageSize.textContent = "Taille de l'image : " + sizeInKB.toFixed(2) + ' Ko';
+                }
             });
         });
     </script>

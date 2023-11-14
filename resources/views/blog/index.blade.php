@@ -53,13 +53,13 @@
                 <section class="w-full flex flex-col lg:flex-row gap-4 mt-4">
                     @foreach($posts as $post)
                         @if($post->is_second === 1)
-                            <article class="border border-violet-900 flex flex-col lg:flex-row justify-center items-center rounded-xl p-5 mx-5 md:4/6
+                            <article class="border border-violet-900 flex flex-col justify-center items-center rounded-xl p-5 mx-5 md:4/6
                 overflow-hidden transition-transform h-auto mt-5">
-                                <div class="relative lg:w-1/2 ">
+                                <div class="relative w-full ">
                                     <img
                                         src="{{ Storage::url($post->thumbnail) }}"
                                         alt="{{  $post->alt_description}}"
-                                        class="object-cover object-top h-54 lg:h-48 rounded-t-lg"
+                                        class="object-cover object-top  rounded-t-lg"
                                     />
                                     <div
                                         class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
@@ -68,7 +68,7 @@
                                         @endforeach
                                     </div>
                                 </div>
-                                <div class="mt-3 lg:w-1/2 flex flex-col justify-start items-center">
+                                <div class="mt-3 flex flex-col justify-start items-center">
                                     <div>
                                         <h2 class="text-base font-bold text-violet-800">{{$post->title}}</h2>
                                         <p class="text-sm font-light mt-3 text-violet-900">{{$post->excerpt}}</p>
@@ -193,7 +193,7 @@
                     @foreach($categories as $category)
                         <ul class="list-disc ml-8 my-1">
                             <li class="text-md font-light text-purple-900 hover:text-orange-500">
-                                <a href="" }>
+                                <a href="">
                                     {{ $category->name}}
                                 </a>
                             </li>

@@ -1,4 +1,5 @@
 <x-app-layout>
+
 {{--    <x-slot name="header">--}}
 {{--        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">--}}
 {{--            {{ __('Post') }}--}}
@@ -31,7 +32,8 @@
                                 <tbody>
                                 <tr class="border-b">
                                     <th class="text-left p-3 px-5">Titre</th>
-                                    <th class="text-center p-3 px-5">Mis en avant</th>
+                                    <th class="text-center p-3 px-5">Mis en Avant</th>
+                                    <th class="text-center p-3 px-5">Mis en Second</th>
 
                                     <th></th>
                                 </tr>
@@ -42,7 +44,7 @@
                                     <td class="p-3 text-center px-5">
                                         @if($post->is_ahead)
                                             <button type="button"
-                                                    class="mr-3 text-sm bg-orange-500 text-white py-1 px-3 rounded
+                                                    class="is-ahead-toggle mr-3 text-sm bg-orange-500 text-white py-1 px-3 rounded
                                                     focus:outline-none focus:shadow-outline">
                                                 OUI
                                             </button>
@@ -56,10 +58,27 @@
                                         @endif
 
                                     </td>
+                                    <td class="p-3 text-center px-5">
+                                        @if($post->is_second)
+                                            <button type="button"
+                                                    class="mr-3 text-sm bg-orange-500 text-white py-1 px-3 rounded
+                                                    focus:outline-none focus:shadow-outline">
+                                                OUI
+                                            </button>
+                                        @else
+                                            <button type="button"
+                                                    class="mr-3 text-sm bg-purple-500  text-white py-1 px-2 rounded
+                                                    focus:outline-none
+                                                    focus:shadow-outline">
+                                                NON
+                                            </button>
+                                        @endif
+
+                                    </td>
                                     <td class="p-3 px-5 flex justify-end">
 
 
-                                        <a href="{{route('admin.post.edit', ['post' => $post])}}"
+                                        <a href="{{ route('admin.post.edit', $post) }}"
                                            class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                                             Modifier
                                         </a>
@@ -69,16 +88,24 @@
                                             <button type="submit" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                                                 Supprimer
                                             </button>
+
+
                                         </form>
                                     </td>
                                 </tr>
                                 @endforeach
                                 </tbody>
                             </table>
+
+
+
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </x-app-layout>

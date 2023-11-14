@@ -42,7 +42,7 @@ class AdminController extends Controller
             'title' => 'required|max:150',
             'slug' => 'required|unique:posts',
             'auteur_id' => 'required|exists:auteurs,id',
-            'excerpt' => 'required',
+            'excerpt' => 'required|max:160',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'content' => 'required',
             'is_ahead' => 'sometimes|boolean',
@@ -58,7 +58,11 @@ class AdminController extends Controller
         $validatedData['is_ahead'] = $request->has('is_ahead');
         $validatedData['is_second'] = $request->has('is_second');
 
-        Post::create($validatedData);
+        $post = Post::create($validatedData);
+
+
+        $categoryIds = $request->input('category_id');
+        $post->categories()->attach($categoryIds);
 
         return redirect()->route('admin.post.index');
     }
@@ -70,7 +74,8 @@ class AdminController extends Controller
      */
     public function edit(Post $post): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('admin.post.edit', compact('post'));
+
+        return view('admin.post.edit',  ['post' => $post, 'auteur' => $post->auteur]);
     }
 
     /**
@@ -82,11 +87,12 @@ class AdminController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:150',
             'slug' => 'required|unique:posts,slug,' . $post->id,
-            'auteur_id' => 'required|exists:autors,id',
+            'auteur_id' => 'required|exists:auteurs,id',
             'excerpt' => 'required',
             'content' => 'required',
-            'thumbnail' => 'required',
-            'is_ahead' => 'required|boolean',
+            'thumbnail' => $post->exists ? 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'is_ahead' => $post->exists ? 'sometimes|boolean':'required|boolean',
+            'is_second' => $post->exists ? 'sometimes|boolean' : 'required|boolean',
             'alt_description' => 'required|max:150',
         ]);
 

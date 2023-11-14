@@ -94,15 +94,15 @@
             });
         </script>
         <!--Validation de la soumission du contenu Tiny--->
-    <script>
-        document.getElementById('your-form-id').addEventListener('submit', function(e) {
-            var content = tinymce.get('content').getContent();
-            if (content.length === 0) {
-                e.preventDefault();
-                alert('Le contenu est requis.');
+{{--    <script>--}}
+{{--        document.getElementById('your-form-id').addEventListener('submit', function(e) {--}}
+{{--            var content = tinymce.get('content').getContent();--}}
+{{--            if (content.length === 0) {--}}
+{{--                e.preventDefault();--}}
+{{--                alert('Le contenu est requis.');--}}
 
-            }
-        });
-    </script>
+{{--            }--}}
+{{--        });--}}
+{{--    </script>--}}
     </body>
 </html>
