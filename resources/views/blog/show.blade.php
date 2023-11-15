@@ -32,13 +32,15 @@
 
                     <div id="post-content">
                         {!! $post->content !!}
-                        <div class="social-share-buttons flex flex-row justify-end gap-4 items-center">
-                            <form action="{{ route('blog.like', $post) }}" method="POST">
-                                @csrf
-                                <button type="submit" class="add-like">J'aime</button>
-                            </form>
-                            <p>Nombre de J'aime : {{ $post->like_count }}</p>
-                        </div>
+                        <!--TODO ajouter la fonctionnalité  d'ajout de Like à l'aide des cookies -->
+{{--                        <div class="social-share-buttons flex flex-row justify-end gap-4 items-center">--}}
+{{--                            <form action="{{ route('blog.like', $post) }}" method="POST">--}}
+{{--                                @csrf--}}
+{{--                                <button type="submit" class="add-like" {{ $userHasLiked ? 'disabled' : '' }}>J'aime</button>--}}
+
+{{--                            </form>--}}
+{{--                            <p id="like-count">Nombre de J'aime : {{ $post->like_count }}</p>--}}
+{{--                        </div>--}}
                         <div class="social-share-buttons flex flex-row justify-end gap-4 items-center">
                             <!-- Bouton de partage Facebook -->
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::url()) }}" target="_blank">Partager sur
@@ -48,8 +50,6 @@
                             <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::url()) }}&text={{ urlencode($post->title) }}"
                                target="_blank">Partager sur Twitter</a>
                         </div>
-                        cls
-
                     </div>
                 </section>
                 <!--End top Post-->
@@ -71,7 +71,7 @@
                             <!-- Affichage de chaque post -->
                             <ul class="list-disc ml-8 my-1">
                                 <li class="text-base font-regular text-purple-900 hover:text-orange-500">
-                                    <a href="">
+                                    <a href="{{ route('blog.show', $post) }}">
                                         {{ $post->title }}
                                     </a>
                                 </li>

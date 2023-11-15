@@ -41,7 +41,7 @@
             // Exemple avec un compteur simple:
             $post->increment('like_count');
 
-            return back();
+            return response()->json(['like_count' => $post->like_count]);
         }
         public function unlike(Post $post)
         {

@@ -58,9 +58,10 @@
     </script>
     <!--Like-->
     <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.querySelector('.add-like').addEventListener('click', function(e) {
             e.preventDefault();
-            let form = this;
+            let button = this;
+            let form = button.closest('form');
             fetch(form.action, {
                 method: 'POST',
                 headers: {
@@ -70,8 +71,8 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    // Mettez à jour le compteur de "J'aime" ici
                     document.getElementById('like-count').innerText = data.like_count;
+                    button.disabled = true; // Désactiver le bouton
                 });
         });
     </script>
