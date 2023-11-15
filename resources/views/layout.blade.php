@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" type="image/svg+xml" href="{{asset('icons/adaptive-icon.png')}}" />
     <title>Laravel</title>
 
-    <!-- Fonts -->
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +56,26 @@
         }
 
     </script>
+    <!--Like-->
+    <script>
+        document.querySelector('.add-like').addEventListener('click', function(e) {
+            e.preventDefault();
+            let button = this;
+            let form = button.closest('form');
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('like-count').innerText = data.like_count;
+                    button.disabled = true; // Désactiver le bouton
+                });
+        });
+    </script>
 
 </head>
 <body class="antialiased">
@@ -64,5 +84,6 @@
     @yield('content')
 </main>
 @include('home/footer')
+
 </body>
 </html>

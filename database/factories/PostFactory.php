@@ -34,7 +34,7 @@ class PostFactory extends Factory
             'alt_description' => fake()->sentence(4),
             'created_at' => $createdAt,
             'updated_at' => $createdAt,
-
+            'like' => fake()->numberBetween(0, 200)
 
         ];
     }
