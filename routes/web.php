@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StaticPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,30 +16,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::controller(StaticPageController::class)->group(function () {
+    Route::get('/', 'welcome')->name('welcome');
+    Route::get('/team', 'team')->name('team');
+    Route::get('/contact', 'contact')->name('contact');
+    Route::get('/mentions-legales', 'legal')->name('mentions-legales');
+    Route::get('/privacy-policy', 'policy')->name('privacy-policy');
+    Route::get('/conditions-generales-de-ventes', 'condition')->name('conditions-generales-de-ventes');
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+});
 
-Route::get('/team', function () {
-    return view('team');
-})->name('team');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/mentions-legales', function () {
-    return view('mentions-legales');
-})->name('mentions-legales');
-
-Route::get('/privacy-policy', function () {
-    return view('privacy-policy');
-})->name('privacy-policy');
-
-Route::get('/conditions-generales-de-ventes', function () {
-    return view('conditions-generales-de-ventes');
-})->name('conditions-generales-de-ventes');
 
 
 /* Blog Section */
