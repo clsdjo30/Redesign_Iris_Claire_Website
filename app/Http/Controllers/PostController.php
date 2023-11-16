@@ -43,10 +43,10 @@
                 'categories' => $categories
             ]);
         }
-        public function show(Post $post) {
+        public function show(Post $post, ) {
             $latestPosts = Post::latest()->take(5)->get();
             $categories = Category::all();
-            $catName =
+
 
             /**SEO**/
             SEOMeta::setTitle($post->title);
