@@ -53,6 +53,17 @@
     padding-top: 10px;
     padding-bottom: 5px;
 }
+#post-content a {
+    color: #C94013;
+    font-size: 18px;
+    text-decoration: underline;
+}
+#post-content a:hover {
+    color: #A855F7;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 #post-content p {
     color: #4C1D95;
     font-size: 18px;
