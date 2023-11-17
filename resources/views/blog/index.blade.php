@@ -38,7 +38,7 @@
                                     <div class="w-full">
                                         <button
                                             class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
-                                            <a href="{{ route('blog.show', $post) }}" class="text-sm">
+                                            <a href="{{ route('blog.show', $post->slug) }}" class="text-sm">
                                                 Lire la suite
                                             </a>
                                         </button>
@@ -61,12 +61,12 @@
                                         alt="{{  $post->alt_description}}"
                                         class="object-cover object-top  rounded-t-lg"
                                     />
+                                        @foreach($categories as $category)
                                     <div
                                         class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
-                                        @foreach($categories as $category)
                                             {{ $category->name }}
-                                        @endforeach
                                     </div>
+                                        @endforeach
                                 </div>
                                 <div class="mt-3 flex flex-col justify-start items-center">
                                     <div>
@@ -76,7 +76,7 @@
                                     <div class="w-full">
                                         <button
                                             class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
-                                            <a href="{{ route('blog.show', $post) }}" class="text-sm">
+                                            <a href="{{ route('blog.show', $post->slug) }}" class="text-sm">
                                                 Lire la suite
                                             </a>
                                         </button>
@@ -120,7 +120,7 @@
                             <div class="w-full">
                                 <button
                                     class="mt-5 mx-auto text-violet-900 font-semibold rounded-full bg-violet-100 border-0 py-1 px-8 focus:outline-none hover:bg-violet-600 hover:text-violet-100 text-lg">
-                                    <a href="{{ route('blog.show', $post) }}" class="text-sm">
+                                    <a href="{{ route('blog.show', $post->slug) }}" class="text-sm">
                                         Lire la suite
                                     </a>
                                 </button>

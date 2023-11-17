@@ -3,48 +3,32 @@
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\StaticPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
 */
+Route::controller(StaticPageController::class)->group(function () {
+    Route::get('/', 'welcome')->name('welcome');
+    Route::get('/team', 'team')->name('team');
+    Route::get('/contact', 'contact')->name('contact');
+    Route::get('/mentions-legales', 'legal')->name('mentions-legales');
+    Route::get('/privacy-policy', 'policy')->name('privacy-policy');
+    Route::get('/conditions-generales-de-ventes', 'condition')->name('conditions-generales-de-ventes');
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+});
 
-Route::get('/team', function () {
-    return view('team');
-})->name('team');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/mentions-legales', function () {
-    return view('mentions-legales');
-})->name('mentions-legales');
-
-Route::get('/privacy-policy', function () {
-    return view('privacy-policy');
-})->name('privacy-policy');
-
-Route::get('/conditions-generales-de-ventes', function () {
-    return view('conditions-generales-de-ventes');
-})->name('conditions-generales-de-ventes');
-
+Route::get('/sitemap', [SitemapController::class, 'index']);
 
 /* Blog Section */
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
-Route::get('/blog/{post}', [PostController::class, 'show'])->name('blog.show');
+Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('blog.show');
 Route::post('/blog/{post}/like', [PostController::class, 'like'])->name('blog.like');
 Route::post('/blog/{post}/unlike', [PostController::class, 'unlike'])->name('blog.unlike');
 

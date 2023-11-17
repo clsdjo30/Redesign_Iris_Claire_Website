@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="{{asset('icons/adaptive-icon.png')}}" />
-    <title>Laravel</title>
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
 
 
     <!-- Fonts -->
@@ -55,26 +57,6 @@
             }
         }
 
-    </script>
-    <!--Like-->
-    <script>
-        document.querySelector('.add-like').addEventListener('click', function(e) {
-            e.preventDefault();
-            let button = this;
-            let form = button.closest('form');
-            fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                    'Accept': 'application/json'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('like-count').innerText = data.like_count;
-                    button.disabled = true; // Désactiver le bouton
-                });
-        });
     </script>
 
 </head>
