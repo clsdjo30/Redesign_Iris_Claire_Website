@@ -60,6 +60,7 @@ class AdminController extends Controller
         $validatedData['is_second'] = $request->has('is_second');
 
         $post = Post::create($validatedData);
+        event(new \App\Events\PostUpdated($post));
 
 
         $categoryIds = $request->input('category_id');
@@ -98,6 +99,7 @@ class AdminController extends Controller
         ]);
 
         $post->update($validatedData);
+        event(new \App\Events\PostUpdated($post));
         $categoryIds = $request->input('category_id');
         $post->categories()->attach($categoryIds);
 
