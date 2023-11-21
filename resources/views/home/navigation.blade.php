@@ -1,11 +1,9 @@
 <nav class="lg:hidden relative z-50">
     <div class="flex py-2 justify-between items-center px-4">
         <div class="flex flex-row content-center items-center w-8/12">
+            <a href="{{route('welcome')}}">
             <img src="{{asset('images/logo_500.png')}}" alt="logo" class="w-8/12" />
-{{--            <p class="font-display font-bold text-2xl">--}}
-{{--                <span class="font-bold text-violet-800">IRIS</span>--}}
-{{--                <span class="text-orange-500">CLAIRE</span>--}}
-{{--            </p>--}}
+            </a>
         </div>
         <div class="visible flex items-center">
             <button id="open" onclick="MenuHandler(true)" class="focus:outline-none focus:ring-2 focus:ring-black">
@@ -16,28 +14,28 @@
                 <li
                     class="flex cursor-pointer text-violet-800 text-base leading-3 tracking-normal
                     mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                    <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                    <a href="{{route('welcome')}}" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
                         <span class="font-bold">L'Application</span>
                     </a>
                 </li>
                 <li class="flex cursor-pointer text-violet-800  text-base leading-3 tracking-normal
                 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none"
                     onclick="dropdownHandler(this)">
-                    <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                    <a href="{{route('team')}}" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
                         <span class="font-bold">La Team</span>
                     </a>
                 </li>
-                <li
-                    class="flex cursor-pointer text-violet-800 text-base leading-3 tracking-normal
-                    py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                    <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
-                        <span class="font-bold">Le Tarot d'Iris Claire</span>
-                    </a>
-                </li>
+{{--                <li--}}
+{{--                    class="flex cursor-pointer text-violet-800 text-base leading-3 tracking-normal--}}
+{{--                    py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">--}}
+{{--                    <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">--}}
+{{--                        <span class="font-bold">Le Tarot d'Iris Claire</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li class="flex cursor-pointer text-violet-800  text-base leading-3 tracking-normal
                 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none"
                     onclick="dropdownHandler(this)">
-                    <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                    <a href="{{route('blog')}}" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
                         <span class="font-bold">Le Blog</span>
                     </a>
                 </li>
@@ -55,11 +53,9 @@
 <nav class="f-f-l relative fixed top-0 z-40">
     <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center">
         <div class="flex flex-row content-center items-center w-4/12">
+            <a href="{{route('welcome')}}">
             <img src="{{asset('images/logo_500.png')}}" alt="logo" class="w-8/12" />
-{{--            <p class="text-4xl font-bold">--}}
-{{--                <span class="font-bold text-violet-800">IRIS</span>--}}
-{{--                <span class="text-orange-500">CLAIRE</span>--}}
-{{--            </p>--}}
+            </a>
         </div>
         <div class="flex items-center text-purple-800 text-base font-medium">
             <ul class="flex items-center pr-3 xl:pr-12">
@@ -72,11 +68,11 @@
                     <a href="{{ route('team') }}" class="focus:outline-none focus:ring-2
                         focus:ring-white">La Team</a>
                 </li>
-                <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-orange-300  text-lg
-                ease-in">
-                    <a href="javascript:void(0)" class="focus:outline-none focus:ring-2
-                        focus:ring-white">Le Tarot Iris Claire</a>
-                </li>
+{{--                <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-orange-300  text-lg--}}
+{{--                ease-in">--}}
+{{--                    <a href="javascript:void(0)" class="focus:outline-none focus:ring-2--}}
+{{--                        focus:ring-white">Le Tarot Iris Claire</a>--}}
+{{--                </li>--}}
                 <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-orange-300  text-lg
                 ease-in">
                     <a href="{{route('blog')}}" class="focus:outline-none focus:ring-2
