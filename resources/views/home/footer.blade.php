@@ -1,12 +1,12 @@
 <footer class="bg-gradient-to-r from-violet-700 from-10% via-violet-800
     to-violet-900 to-70%">
     <div class="container mx-auto py-16 xl:px-20 lg:px-12 sm:px-6 px-4">
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-8 gap-4">
-            <div class="flex flex-col flex-shrink-0">
-                <div>
+        <div class="flex flex-col lg:flex-row justify-center items-center md:gap-8 gap-4">
+            <div class="flex flex-col justify-center items-center order-2 mt-10">
+                <div class="w-full flex items-center justify-center">
                     <img src="{{asset('images/logo_500_clair.png')}}"
                          alt="icon"
-                         class="w-1/2">
+                         class="w-1/2 items-self-center">
 
                 </div>
                 <p class="text-sm leading-none text-violet-100 mt-4 ">Copyright © 2023 DigitalFy</p>
@@ -85,8 +85,9 @@
                     </button>
                 </div>
             </div>
-            <div class="sm:ml-0 ml-8 flex flex-col">
-                <h2 class="text-base font-semibold leading-4 text-violet-100">Company</h2>
+            <div class="w-full flex flex-col mx-12 order-1">
+                <h2 class="text-base font-semibold leading-4 text-violet-100 text-center ">Company</h2>
+                <div class="flex lg:flex-col justify-evenly items-center gap-4">
                 <a href="{{route('team')}}"
                    class="focus:outline-none focus:underline hover:text-gray-500 text-base
                    leading-4 mt-6 text-violet-100  cursor-pointer">Team</a>
@@ -96,9 +97,11 @@
                 <a href="{{route('blog')}}"
                    class="focus:outline-none focus:underline hover:text-gray-500 text-base
                    leading-4 mt-6 text-violet-100  cursor-pointer">Blog</a>
+                </div>
             </div>
-            <div class="flex flex-col">
-                <h2 class="text-base font-semibold leading-4 text-violet-100">Legal</h2>
+            <div class="w-full flex flex-col mx-6 mt-4">
+                <h2 class="text-base font-semibold leading-4 text-violet-100 text-center">Legals</h2>
+                <div class="flex lg:flex-col justify-around items-center gap-2">
                 <a href="{{route('conditions-generales-de-ventes')}}"
                    class="focus:outline-none focus:underline hover:text-gray-500 text-base
                    leading-4 mt-6 text-violet-100  cursor-pointer">CGU/CGV</a>
@@ -108,6 +111,7 @@
                 <a href="{{route('privacy-policy')}}"
                    class="focus:outline-none focus:underline hover:text-gray-500 text-base
                    leading-4 mt-6 text-violet-100 cursor-pointer">Politique de confidentialité</a>
+                </div>
             </div>
         </div>
     </div>
