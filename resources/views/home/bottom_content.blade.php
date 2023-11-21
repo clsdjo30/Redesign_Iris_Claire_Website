@@ -5,10 +5,15 @@
         </h2>
         <div class="flex items-center justify-center ">
             <div class="w-10/12">
-                <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6">
-                    <img src="https://i.ibb.co/SKLJ7WX/austin-distel-jp-Hw8ndw-J-Q-unsplash-1.png"
-                         alt="ongoing meeting"
-                         class="w-full obejct-fit object-center object-fill h-full"/>
+                <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 -mb-80">
+                    <img src="{{asset('images/bg-pattern.png')}}" alt="ongoing meeting"
+                         class="w-full
+            object-fit object-center
+            object-fill
+             h-full"/>
+                    <img src="{{asset('images/myanswer.png')}}" alt="ongoing meeting"
+                         class="relative -top-80 left-2"/>
+
                 </div>
                 <div class="flex flex-col gap-2 lg:mt-6 2xl:mt-8">
                     <div class="flex items-center">
