@@ -4,7 +4,7 @@
 <h1 class="text-5xl font-semibold leading-10 text-violet-100  text-center">La team</h1>
 <h3 class="text-lg font-semibold leading-10 text-orange-500  text-center mt-3">Notre petit équipe
     de passionné</h3>
-<div class="w-6/12 flex flex wrap  items-stretch  justify-center mt-16 xl:gap-6 gap-4 pb-12">
+<div class="w-6/12 flex  flex-col lg:flex-row flex wrap  items-stretch  justify-center mt-16 xl:gap-6 gap-4 pb-12">
     <div class="lg:w-96 w-80">
         <img src="{{asset('images/team/fiona.png')}}" class="h-72 w-full object-cover object-center
         rounded-t-md"
