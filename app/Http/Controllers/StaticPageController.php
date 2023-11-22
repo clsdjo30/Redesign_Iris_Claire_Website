@@ -86,34 +86,34 @@ class StaticPageController extends Controller
 
     public function policy() {
 
-        SEOMeta::setTitle('Iris Claire - politique de confidentialité - Votre application de tarot divinatoire de poche');
+        SEOMeta::setTitle('Iris Claire - politique de confidentialité ');
         SEOMeta::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
         SEOMeta::setCanonical('https://irisclaire.fr/');
         SEOMeta::addKeyword('tarot divinatoire, application mobile');
 
-        OpenGraph::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
+        OpenGraph::setTitle('Iris Claire - politique de confidentialité ');
         OpenGraph::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
         OpenGraph::setUrl('https://votre-url.com/');
         OpenGraph::addProperty('type', 'website');
 
-        TwitterCard::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
+        TwitterCard::setTitle('Iris Claire - politique de confidentialité ');
         TwitterCard::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
 
         return view('privacy-policy');
     }
 
     public function condition() {
-        SEOMeta::setTitle('Iris Claire - CGV/CGU - Votre application de tarot divinatoire de poche');
+        SEOMeta::setTitle('Iris Claire - CGV/CGU ');
         SEOMeta::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
         SEOMeta::setCanonical('https://irisclaire.fr/');
         SEOMeta::addKeyword('tarot divinatoire, application mobile');
 
-        OpenGraph::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
+        OpenGraph::setTitle('Iris Claire - CGV/CGU ');
         OpenGraph::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
         OpenGraph::setUrl('https://votre-url.com/');
         OpenGraph::addProperty('type', 'website');
 
-        TwitterCard::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
+        TwitterCard::setTitle('Iris Claire - CGV/CGU ');
         TwitterCard::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
 
         return view('conditions-generales-de-ventes');
