@@ -14,18 +14,18 @@ class StaticPageController extends Controller
     public function welcome()
     {
         // Configuration des métadonnées SEO
-        SEOMeta::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
-        SEOMeta::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
+        SEOMeta::setTitle('Voyance Précise et Rapide – Posez Vos Questions sur l’App Iris Claire');
+        SEOMeta::setDescription("Avec l'App Iris Claire, obtenez une voyance tarologie instantanée pour toutes vos préoccupations. Posez votre question et recevez une guidance précise – Service premium, réponse immédiate.");
         SEOMeta::setCanonical('https://irisclaire.fr/');
-        SEOMeta::addKeyword('tarot divinatoire, application mobile');
+        SEOMeta::addKeyword('tarot divinatoire, application mobile, voyance tarologie, réponses instantanées, consultation tarot, voyance premium, clairvoyance en ligne, guidance spirituelle, avenir amoureux, tarologie professionnelle');
 
-        OpenGraph::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
-        OpenGraph::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
+        OpenGraph::setTitle('Voyance Précise et Rapide – Posez Vos Questions sur l’App Iris Claire');
+        OpenGraph::setDescription("Avec l'App Iris Claire, obtenez une voyance tarologie instantanée pour toutes vos préoccupations. Posez votre question et recevez une guidance précise – Service premium, réponse immédiate.");
         OpenGraph::setUrl('https://votre-url.com/');
         OpenGraph::addProperty('type', 'website');
 
-        TwitterCard::setTitle('Iris Claire - Votre application de tarot divinatoire de poche');
-        TwitterCard::setDescription("Découvrez le tarot unique Iris Claire, votre guide spirituel personnel pour l'amour, la carrière et le bien-être. Rejoignez la communauté Iris Claire aujourd'hui.");
+        TwitterCard::setTitle('Voyance Précise et Rapide – Posez Vos Questions sur l’App Iris Claire');
+        TwitterCard::setDescription("Avec l'App Iris Claire, obtenez une voyance tarologie instantanée pour toutes vos préoccupations. Posez votre question et recevez une guidance précise – Service premium, réponse immédiate.");
 
         return view('welcome');
     }
