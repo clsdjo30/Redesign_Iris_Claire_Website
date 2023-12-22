@@ -10,6 +10,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -97,11 +98,20 @@ class AdminController extends Controller
             'is_second' => $post->exists ? 'sometimes|boolean' : 'required|boolean',
             'alt_description' => 'required|max:150',
         ]);
+        if ($request->hasFile('thumbnail')) {
+            // Supprimez l'ancienne image si nécessaire
+            Storage::delete('public/' . $post->thumbnail);
+
+            // Téléchargez et stockez la nouvelle image
+            $filename = $request->file('thumbnail')->store('thumbnails', 'public');
+            $validatedData['thumbnail'] = $filename;
+        }
 
         $post->update($validatedData);
         event(new \App\Events\PostUpdated($post));
         $categoryIds = $request->input('category_id');
-        $post->categories()->attach($categoryIds);
+        $post->categories()->sync($categoryIds);
+
 
 
         return redirect()->route('admin.post.index');

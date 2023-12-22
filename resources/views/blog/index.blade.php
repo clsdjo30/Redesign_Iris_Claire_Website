@@ -23,7 +23,7 @@
                                         alt="{{  $post->alt_description}}"
                                         class="object-cover object-top  rounded-t-lg"
                                     />
-                                    @foreach($categories as $category)
+                                    @foreach($post->categories as $category)
                                         <div
                                             class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
                                             {{ $category->name }}
@@ -61,7 +61,7 @@
                                         alt="{{  $post->alt_description}}"
                                         class="object-cover object-top  rounded-t-lg"
                                     />
-                                        @foreach($categories as $category)
+                                        @foreach($post->categories as $category)
                                     <div
                                         class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
                                             {{ $category->name }}
@@ -106,7 +106,7 @@
                                 alt="{{  $post->alt_description}}"
                                 class="object-cover object-top h-54 lg:h-48 rounded-t-lg"
                             />
-                            @foreach($categories as $category)
+                            @foreach($post->categories as $category)
                                 <div class="absolute bottom-5 w-1/3 flex p-1 bg-white justify-center content-center font-semibold text-orange-400 ">
                                     {{ $category->name }}
                                 </div>

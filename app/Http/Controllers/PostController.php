@@ -18,9 +18,10 @@
          */
         public function index()
         {
-            $posts = Post::paginate(5);
+            $posts = Post::with('categories')->paginate(5);
             $latestPosts = Post::latest()->take(5)->get();
             $categories = Category::all();
+
 
             /**SEO**/
             SEOMeta::setTitle("Blog d'Iris Claire - Votre application de tarot divinatoire de poche");
