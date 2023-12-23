@@ -67,11 +67,17 @@
         gtag('js', new Date());
         gtag('config', '{{ env('ANALYTICS_PROPERTY_ID') }}');
     </script>
+    <!--Tiny Editor-->
 
+    <script src="https://cdn.tiny.cloud/1/1plgbhycyw091zq4sk3p4psqw7cg6erdbfl645jyau9j71ph/tinymce/6/tinymce.min.js"
+            referrerpolicy="origin"></script>
 
-
+    {{--    Cookies--}}
+    @cookieconsentscripts
 </head>
 <body class="antialiased">
+<!-- ... -->
+@cookieconsentview
 @include('home/navigation')
 <main class="bg-purple-100  lg:px-24">
     @yield('content')
