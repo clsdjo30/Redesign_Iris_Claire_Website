@@ -7,6 +7,7 @@
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
 
 
     <!-- Fonts -->
@@ -37,8 +38,8 @@
     <!-- Script Faq-->
     <script>
         function openAnsSection(val) {
-            var p = document.getElementById("para" + val);
-            var svg = document.getElementById("path" + val);
+            let p = document.getElementById("para" + val);
+            let svg = document.getElementById("path" + val);
 
             if (p.classList.contains("hidden")) {
                 p.classList.remove("hidden");
@@ -59,7 +60,7 @@
 
     </script>
 
-    <!-- Script Google analytics-->
+    <!-- Script Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('ANALYTICS_PROPERTY_ID') }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

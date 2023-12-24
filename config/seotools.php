@@ -50,7 +50,7 @@ return [
          */
         'defaults' => [
             'card'        => 'summary',
-            'site'        => '@LuizVinicius73',
+            'site'        => 'https://irisclaire.fr/',
         ],
     ],
     'json-ld' => [
@@ -58,9 +58,9 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'Over 9000 Thousand!', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url'         => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
+            'title'       => 'Voyance Précise et Rapide – Posez Vos Questions sur l’App Iris Claire', // set false to total remove
+            'description' => "Avec l'App Iris Claire, obtenez une voyance tarologie instantanée pour toutes vos préoccupations. Posez votre question et recevez une guidance précise – Service premium, réponse immédiate.",
+            'url'         => null, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],
         ],
