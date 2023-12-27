@@ -13,7 +13,7 @@ return [
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => false, // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => [],
+            'keywords'     => ['tarot divinatoire', 'application mobile', 'voyance tarologie', 'réponses instantanées', 'consultation tarot', 'voyance premium', 'clairvoyance en ligne', 'guidance spirituelle', 'avenir amoureux', 'tarologie professionnelle'],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],

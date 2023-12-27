@@ -6,6 +6,17 @@
         <h1 class="w-full text-5xl text-purple-600 font-bold text-center "> Le Blog d'Iris Claire </h1>
         <h2 class="text-center text-2xl text-purple-900 font-thin text-center "> Tous les sujets du moment sur notre blog : astrologie, horoscope,
             spiritualité, rituel, développement personnel…</h2>
+{{--        <div class="flex flex-roxw justify-center items-center space-x-8 gap-6">--}}
+{{--        @foreach($showCategories as $category)--}}
+{{--            <ul>--}}
+{{--                <li>--}}
+{{--                    <a href="{{ route('blog.category', $category) }}">--}}
+{{--                    {{$category->name}}--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            </ul>--}}
+{{--        @endforeach--}}
+{{--        </div>--}}
     </div>
     <div class="w-full flex flex-col lg:flex-row justify-center lg:px-12 lg:py-12 pt-6 lg:mt-12 bg-purple-50">
 

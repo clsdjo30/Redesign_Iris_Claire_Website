@@ -29,8 +29,9 @@ Route::get('/sitemap', [SitemapController::class, 'index']);
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
 Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('blog.show');
-Route::post('/blog/{post}/like', [PostController::class, 'like'])->name('blog.like');
-Route::post('/blog/{post}/unlike', [PostController::class, 'unlike'])->name('blog.unlike');
+Route::get('/blog/category/{category}', [PostController::class, 'showCategory'])->name('blog.category');
+
+
 
 
 /* Dashboard Section */
