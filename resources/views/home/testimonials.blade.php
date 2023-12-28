@@ -11,7 +11,7 @@ xl:px-20 px-10 py-20 gap-6">
                 <div class="relative -top-24 md:-top-28">
                     <div class="flex flex-col items-center justify-center">
                         <img
-                            src="{{asset('images/avatar/woman_avatar_three.png')}}"
+                            src="{{asset('images/avatar/woman_avatar_three.webp')}}"
                             alt="profile pictre"
                             class="w-28 h-28"
                         />
@@ -19,11 +19,11 @@ xl:px-20 px-10 py-20 gap-6">
                             Sarh2803
                         </p>
                         <div class="flex">
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
                         </div>
                         <p
                             class="text-base font-semibold leading-4 my-2 text-yellow-600 group-hover:text-violet-500 text-center mt-5">
@@ -47,7 +47,7 @@ xl:px-20 px-10 py-20 gap-6">
                 <div class="relative -top-24 md:-top-28">
                     <div class="flex flex-col items-center justify-center">
                         <img
-                            src="{{asset('images/avatar/woman_avatar_one.png')}}"
+                            src="{{asset('images/avatar/woman_avatar_one.webp')}}"
                             alt="profile pictre"
                             class="w-28 h-28"
                         />
@@ -55,11 +55,11 @@ xl:px-20 px-10 py-20 gap-6">
                             Emma
                         </p>
                         <div class="flex">
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
                         </div>
                         <p
                             class="text-base font-semibold leading-4 my-2  text-yellow-600 group-hover:text-violet-500 text-center mt-5">
@@ -84,7 +84,7 @@ xl:px-20 px-10 py-20 gap-6">
                 <div class="relative -top-24 md:-top-28">
                     <div class="flex flex-col items-center justify-center">
                         <img
-                            src="{{asset('images/avatar/woman_avatar_two.png')}}"
+                            src="{{asset('images/avatar/woman_avatar_two.webp')}}"
                             alt="profile pictre"
                             class="w-28 h-28"
                         />
@@ -92,11 +92,11 @@ xl:px-20 px-10 py-20 gap-6">
                             Patdu30
                         </p>
                         <div class="flex">
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
-                            <img src="{{asset('icons/star.png')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
+                            <img src="{{asset('icons/star.webp')}}" class="w-4" alt="etoile"/>
                         </div>
                         <p
                             class="text-base font-semibold leading-4 my-2  text-yellow-600 group-hover:text-violet-500 text-center mt-5">

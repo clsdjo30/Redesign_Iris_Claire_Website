@@ -51,6 +51,7 @@ class PostController extends Controller
     {
         $latestPosts = Post::latest()->take(5)->get();
         $categories = Category::all();
+        $showCategory = Category::with('posts')->get();
 
 
         /**SEO**/
@@ -105,7 +106,8 @@ class PostController extends Controller
         return view('blog.show', [
             'post' => $post,
             'latestPosts' => $latestPosts,
-            'categories' => $categories
+            'categories' => $categories,
+            'showCategories' => $showCategory
         ]);
 
     }
@@ -113,11 +115,15 @@ class PostController extends Controller
     public function showCategory(Category $category)
     {
         $posts = $category->posts()->paginate(5);
+        $showCategory = Category::with('posts')->get();
+        $latestPosts = Post::latest()->take(5)->get();
 
         // Retourner la vue avec les posts de la catégorie sélectionnée
         return view('blog.category', [
             'posts' => $posts,
-            'category' => $category
+            'category' => $category,
+            'showCategories' => $showCategory,
+            'latestPosts' => $latestPosts,
         ]);
     }
 

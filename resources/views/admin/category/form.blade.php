@@ -44,6 +44,16 @@
                                                                           autofocus
                                                             />
                                                         </div>
+                                                        <div class="w-full flex flex-col">
+                                                            <!--Post Title-->
+                                                            <x-input-label for="description" :value="__('Déscription de la Catégorie')"/>
+                                                            <x-text-input id="description" class="block mt-1 w-full p-1 pl-2 mb-3"
+                                                                          type="text"
+                                                                          name="description"
+                                                                          required
+                                                                          autofocus
+                                                            />
+                                                        </div>
 
                                                     </div>
                                                     <!--End Post Title & Description -->

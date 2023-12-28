@@ -3,7 +3,7 @@
     <div class="w-full flex flex-col items-center md:flex-row px-4 lg:mx-20">
         <div class="lg:order-2 ">
             <img class="object-coverh-96"
-                 src="{{asset('images/header.png')}}"
+                 src="{{asset('images/header.webp')}}"
                  alt="sample page" role="img"
             />
         </div>

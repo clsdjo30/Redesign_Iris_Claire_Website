@@ -36,7 +36,9 @@ class AdminCategoryController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'name' => 'required|min:5|max:100'
+            'name' => 'required|min:5|max:100',
+            'description' => 'required|min:20|max:160'
+
         ]);
 
         Category::create($validateData);
@@ -59,7 +61,8 @@ class AdminCategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $validateData = $request->validate([
-            'name' => 'required|min:5|max:100'
+            'name' => 'required|min:5|max:100',
+            'description' => 'required|min:20|max:160'
         ]);
 
         $category->update($validateData);

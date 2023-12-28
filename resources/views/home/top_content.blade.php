@@ -6,23 +6,23 @@
         <div class="flex items-center justify-center">
 
             <div class="relative hidden lg:block lg:w-8/12 w-full lg:mt-0 mt-6">
-                <img src="{{asset('images/bg-pattern-3.png')}}" alt="ongoing meeting"
+                <img src="{{asset('images/bg-pattern-3.webp')}}" alt="ongoing meeting"
                      class="w-full
             object-fit object-center
             object-fill
              h-full"/>
-                <img src="{{asset('images/game_draw.png')}}" alt="ongoing meeting"
+                <img src="{{asset('images/game_info.webp')}}" alt="ongoing meeting"
                      class="absolute w-10/12 top-16 left-12"/>
             </div>
             <div class="w-10/12">
 
                 <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 mb-6">
-                    <img src="{{asset('images/bg-pattern-3.png')}}" alt="ongoing meeting"
+                    <img src="{{asset('images/bg-pattern-3.webp')}}" alt="ongoing meeting"
                          class="w-full
             object-fit object-center
             object-fill
              h-full"/>
-                    <img src="{{asset('images/game_draw.png')}}" alt="ongoing meeting"
+                    <img src="{{asset('images/game_info.webp')}}" alt="ongoing meeting"
                          class="relative -top-80 left-2"/>
 
                 </div>
@@ -30,7 +30,7 @@
                     <div class="flex items-center">
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.png')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Voyance
@@ -51,7 +51,7 @@
 
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.png')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Guidance de
@@ -72,7 +72,7 @@
 
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.png')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Consultations

@@ -14,7 +14,7 @@
             <div
                 class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 lg:mt-16 md:mt-12 mt-8 items-center">
                 <div class="relative flex flex-col">
-                    <img src="{{asset('feature/woman_thinking.png')}}" alt="two girls" class="w-full
+                    <img src="{{asset('feature/woman_thinking.webp')}}" alt="two girls" class="w-full
                     h-full"/>
                     <img src="https://i.ibb.co/Tb5CKHn/Rectangle-49.png" alt="opacity bg"
                          class="absolute w-full h-full top-0"/>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="relative flex flex-col">
-                    <img src="{{asset('feature/couple.png')}}" alt="black guy"
+                    <img src="{{asset('feature/couple.webp')}}" alt="black guy"
                          class="w-full"/>
                     <img src="https://i.ibb.co/Tb5CKHn/Rectangle-49.png" alt="opacity bg"
                          class="absolute w-full top-0"/>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="relative flex flex-col">
-                    <img src="{{asset('feature/woman_on_left.png')}}" alt="black guy" class="w-full
+                    <img src="{{asset('feature/woman_on_left.webp')}}" alt="black guy" class="w-full
                     h-full"/>
                     <img src="https://i.ibb.co/Tb5CKHn/Rectangle-49.png" alt="opacity bg"
                          class="absolute w-full h-full top-0"/>

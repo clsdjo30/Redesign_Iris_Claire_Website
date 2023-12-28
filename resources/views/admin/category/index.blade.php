@@ -27,6 +27,7 @@
                                 <tbody>
                                 <tr class="border-b">
                                     <th class="text-left p-3 px-5">Titre</th>
+                                    <th class="text-left p-3 px-5">Description</th>
                                     <th class="text-center p-3 px-5">Mis en avant</th>
 
                                     <th></th>
@@ -35,6 +36,7 @@
 
                                     <tr class=" even:bg-purple-100 border-b hover:bg-orange-100">
                                         <td class="p-3 px-5">{{ $category->name }}</td>
+                                        <td class="p-3 px-5">{{ $category->description }}</td>
                                         <td class="p-3 px-5 flex justify-end">
 
 

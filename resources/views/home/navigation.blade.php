@@ -2,7 +2,7 @@
     <div class="flex py-2 justify-between items-center px-4">
         <div class="flex flex-row content-center items-center w-8/12">
             <a href="{{route('welcome')}}">
-            <img src="{{asset('images/logo_500.png')}}" alt="logo" class="w-8/12" />
+            <img src="{{asset('images/logo_500.webp')}}" alt="logo" class="w-8/12" />
             </a>
         </div>
         <div class="visible flex items-center">
@@ -54,7 +54,7 @@
     <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center">
         <div class="flex flex-row content-center items-center w-4/12">
             <a href="{{route('welcome')}}">
-            <img src="{{asset('images/logo_500.png')}}" alt="logo" class="w-8/12" />
+            <img src="{{asset('images/logo_500.webp')}}" alt="logo" class="w-8/12" />
             </a>
         </div>
         <div class="flex items-center text-purple-800 text-base font-medium">

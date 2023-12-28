@@ -12,12 +12,12 @@
     <div class="flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
         <div class="md:w-5/12 lg:w-4/12 w-full">
             <img
-                src="{{asset('images/femme_question.png')}}"
+                src="{{asset('images/femme_question.webp')}}"
                 alt="Image of Glass bottle"
                 class="w-full md:block hidden"
             />
             <img
-                src="{{asset('images/femme_question_paysage.png')}}"
+                src="{{asset('images/femme_question_paysage.webp ')}}"
                 alt="Image of Glass bottle"
                 class="w-full md:hidden block"
             />

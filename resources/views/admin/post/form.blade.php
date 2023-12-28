@@ -127,7 +127,7 @@
 
                                                         </div>
                                                         <!-- Zone d'affichage pour le nom, la miniature et le poids de l'image -->
-                                                        <div id="image-info" claa="w-1/3">
+                                                        <div id="image-info" class="w-1/3">
                                                             <img id="image-preview" src="#" alt="Aperçu de l'image" style="display: none;
                                                             max-width: 300px; max-height: 300px;">
                                                             <p id="image-name">Nom de l'image : Aucune image choisie</p>

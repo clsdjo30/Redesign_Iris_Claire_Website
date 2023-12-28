@@ -27,9 +27,12 @@ Route::get('/sitemap', [SitemapController::class, 'index']);
 
 /* Blog Section */
 
-Route::get('/blog', [PostController::class, 'index'])->name('blog');
-Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('blog.show');
-Route::get('/blog/category/{category}', [PostController::class, 'showCategory'])->name('blog.category');
+Route::get('/blog', [PostController::class, 'index'])
+    ->name('blog');
+Route::get('/blog/{post:slug}', [PostController::class, 'show'])
+    ->name('blog.show');
+Route::get('/blog/category/{category:name}', [PostController::class, 'showCategory'])
+    ->name('blog.category');
 
 
 

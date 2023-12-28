@@ -1,13 +1,9 @@
 @extends('layout')
 
 @section('content')
+@include('components.breadcrump')
 
-    <div class="flex flex-col justify-center  gap-4 py-12">
-        <h1 class="w-full text-5xl text-purple-600 font-bold text-center "> Le Blog d'Iris Claire </h1>
-        <h2 class="text-center text-2xl text-purple-900 font-thin text-center "> Tous les sujets du moment sur notre blog : astrologie, horoscope,
-            spiritualité, rituel, développement personnel…</h2>
-    </div>
-    <div class="w-full flex flex-col lg:flex-row justify-center lg:px-12 lg:py-12 pt-6 lg:mt-12 bg-purple-50">
+    <div class="w-full flex flex-col lg:flex-row justify-center lg:px-12 lg:py-12 pt-6 lg:mt-0 bg-purple-50">
 
         <section class="w-full lg:w-8/12">
             <header class="pb-6 lg:pb-12">
