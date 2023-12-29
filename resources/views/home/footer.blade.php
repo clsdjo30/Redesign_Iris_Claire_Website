@@ -4,7 +4,7 @@
         <div class="flex flex-col lg:flex-row justify-center items-center md:gap-8 gap-4">
             <div class="flex flex-col justify-center items-center order-2 mt-10">
                 <div class="w-full flex items-center justify-center">
-                    <img src="{{asset('images/logo_500_clair.png')}}"
+                    <img src="{{asset('images/logo_500_clair.webp')}}"
                          alt="icon"
                          class="w-1/2 items-self-center">
 

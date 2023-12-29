@@ -16,7 +16,7 @@
                 <div class="relative flex flex-col">
                     <img src="{{asset('feature/woman_thinking.webp')}}" alt="two girls" class="w-full
                     h-full"/>
-                    <img src="https://i.ibb.co/Tb5CKHn/Rectangle-49.png" alt="opacity bg"
+                    <img src="{{asset('images/Rectangle-49.webp')}}" alt="opacity bg"
                          class="absolute w-full h-full top-0"/>
                     <div class="absolute m-6 bottom-0 z-30">
                         <h4 class="w-64 text-2xl font-semibold leading-8
@@ -31,7 +31,7 @@
                 <div class="relative flex flex-col">
                     <img src="{{asset('feature/couple.webp')}}" alt="black guy"
                          class="w-full"/>
-                    <img src="https://i.ibb.co/Tb5CKHn/Rectangle-49.png" alt="opacity bg"
+                    <img src="{{asset('images/Rectangle-49.webp')}}" alt="opacity bg"
                          class="absolute w-full top-0"/>
                     <div class="absolute m-6 bottom-0 z-30">
                         <h4 class="w-64 text-2xl font-semibold leading-8
@@ -45,7 +45,7 @@
                 <div class="relative flex flex-col">
                     <img src="{{asset('feature/woman_on_left.webp')}}" alt="black guy" class="w-full
                     h-full"/>
-                    <img src="https://i.ibb.co/Tb5CKHn/Rectangle-49.png" alt="opacity bg"
+                    <img src="{{asset('images/Rectangle-49.webp')}}" alt="opacity bg"
                          class="absolute w-full h-full top-0"/>
                     <div class="absolute m-6 bottom-0 z-30">
                         <h4 class="w-80 text-2xl font-semibold leading-8
