@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/svg+xml" href="{{asset('icons/adaptive-icon.png')}}" />
+    <link rel="icon" type="image/svg+xml" href="{{asset('icons/adaptive-icon.png')}}"/>
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! Twitter::generate() !!}
@@ -13,7 +13,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 
     <!-- Styles -->
@@ -64,14 +66,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('ANALYTICS_PROPERTY_ID') }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', '{{ env('ANALYTICS_PROPERTY_ID') }}');
     </script>
-    <!--Tiny Editor-->
 
-    <script src="https://cdn.tiny.cloud/1/1plgbhycyw091zq4sk3p4psqw7cg6erdbfl645jyau9j71ph/tinymce/6/tinymce.min.js"
-            referrerpolicy="origin"></script>
 
     {{--    Cookies--}}
     @cookieconsentscripts
