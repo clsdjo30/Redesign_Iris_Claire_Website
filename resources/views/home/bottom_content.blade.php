@@ -7,19 +7,19 @@
             <div class="w-10/12">
                 <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 -mb-56">
                     <img src="{{asset('images/bg-pattern.webp')}}" alt="ongoing meeting"
-                         class="w-full
+                         class="w-full h-full
             object-fit object-center
             object-fill
              h-full"/>
                     <img src="{{asset('images/myanswer.webp')}}" alt="ongoing meeting"
-                         class="relative w-9/12 -top-64  left-10"/>
+                         class="relative w-9/12 h-full -top-64  left-10"/>
 
                 </div>
                 <div class="flex flex-col gap-2 lg:mt-6 2xl:mt-8">
                     <div class="flex items-center">
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 h-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Accédez à Votre Historique de Voyance Tarot Divinatoire</h2>
@@ -32,7 +32,7 @@
 
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 h-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Gérez Votre Historique de Voyance Tarot Divinatoire</h2>
@@ -45,7 +45,7 @@
 
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 h-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Consultation Instantanée de Votre Voyance Tarot</h2>
@@ -58,12 +58,12 @@
             </div>
             <div class="relative hidden lg:block lg:w-8/12 w-full lg:mt-0 mt-6">
                 <img src="{{asset('images/bg-pattern.webp')}}" alt="ongoing meeting"
-                     class="w-full
+                     class="w-full h-full
             object-fit object-center
             object-fill
              h-full"/>
                 <img src="{{asset('images/myanswer.webp')}}" alt="ongoing meeting"
-                     class="absolute w-10/12 top-10 left-12"/>
+                     class="absolute w-10/12 h-full top-10 left-12"/>
             </div>
         </div>
     </div>
