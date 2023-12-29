@@ -30,7 +30,7 @@
                     <div class="flex items-center">
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 h-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Voyance
@@ -51,7 +51,7 @@
 
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 h-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Guidance de
@@ -72,7 +72,7 @@
 
                         <div class="flex items-start flex-col ml-6 pt-4">
                             <div class="relative flex sm:justify-start items-center -left-14">
-                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 mr-3"
+                                <img src="{{asset('icons/purple_star.webp')}}" class="w-10 h-10 mr-3"
                                      alt="icon
                             etoile violette"/>
                                 <h2 class="text-xl font-semibold leading-6 text-violet-600">Consultations
