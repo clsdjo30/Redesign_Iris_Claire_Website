@@ -2,14 +2,14 @@
 @extends('layout')
 
 @section('content')
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
         @include('components.breadcrump')
-        <div class="w-full flex flex-col justify-center bg-purple-50 pt-6 gap-4">
+        <div class="w-full flex flex-col justify-center items-center bg-purple-50 pt-6 gap-4">
             <h1 class="text-5xl text-purple-600 font-bold text-center">{{ $category->name }}</h1>
-            <h2 class="text-2xl text-purple-900 font-thin text-center">{{ $category->description }}</h2>
+            <h2 class="text-2xl text-purple-900 font-thin text-center px-2">{{ $category->description }}</h2>
         </div>
         <div class="w-full flex flex-col lg:flex-row justify-center lg:py-12 pt-6 bg-purple-50">
-            <section class="w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 ml-6 auto-rows-min">
+            <section class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 lg:ml-6 auto-rows-min px-5">
                 @foreach($posts as $post)
                     {{-- Début du post --}}
                     <article class="flex flex-col border border-violet-900 rounded-xl transition-transform mt-5">

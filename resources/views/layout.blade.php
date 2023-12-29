@@ -80,7 +80,7 @@
 <!-- ... -->
 @cookieconsentview
 @include('home/navigation')
-<main class="bg-purple-100  lg:px-24">
+<main class="bg-purple-100  lg:px-24 mx-auto">
     @yield('content')
 </main>
 @include('home/footer')
