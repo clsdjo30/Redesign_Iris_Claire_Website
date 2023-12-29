@@ -6,24 +6,24 @@
         <div class="flex items-center justify-center">
 
             <div class="relative hidden lg:block lg:w-8/12 w-full lg:mt-0 mt-6">
-                <img src="{{asset('images/bg-pattern-3.webp')}}" alt="ongoing meeting"
+                <img src="{{asset('images/bg-pattern-3.webp')}}" alt="element de decoration ecran mobile avec des cartes"
                      class="w-full
             object-fit object-center
             object-fill
              h-full"/>
-                <img src="{{asset('images/game_info.webp')}}" alt="ongoing meeting"
-                     class="absolute w-10/12 top-16 left-12"/>
+                <img src="{{asset('images/game_info.webp')}}" alt="ecran de mobile avec des cartes"
+                     class="absolute w-10/12 top-10 left-12"/>
             </div>
             <div class="w-10/12">
 
-                <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 mb-6">
-                    <img src="{{asset('images/bg-pattern-3.webp')}}" alt="ongoing meeting"
+                <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 mb-20">
+                    <img src="{{asset('images/bg-pattern-3.webp')}}" alt="element de decoration ecran mobile avec des cartes"
                          class="w-full
             object-fit object-center
             object-fill
              h-full"/>
-                    <img src="{{asset('images/game_info.webp')}}" alt="ongoing meeting"
-                         class="relative -top-80 left-2"/>
+                    <img src="{{asset('images/game_info.webp')}}" alt="ecran de mobile avec des cartes"
+                         class="relative w-9/12 -top-64 left-10"/>
 
                 </div>
                 <div class="flex flex-col gap-2 lg:mt-6 2xl:mt-8 -mt-80">

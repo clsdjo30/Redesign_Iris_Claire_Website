@@ -5,14 +5,14 @@
         </h2>
         <div class="flex items-center justify-center ">
             <div class="w-10/12">
-                <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 -mb-80">
+                <div class="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6 -mb-56">
                     <img src="{{asset('images/bg-pattern.webp')}}" alt="ongoing meeting"
                          class="w-full
             object-fit object-center
             object-fill
              h-full"/>
                     <img src="{{asset('images/myanswer.webp')}}" alt="ongoing meeting"
-                         class="relative -top-80 left-2"/>
+                         class="relative w-9/12 -top-64  left-10"/>
 
                 </div>
                 <div class="flex flex-col gap-2 lg:mt-6 2xl:mt-8">
@@ -63,7 +63,7 @@
             object-fill
              h-full"/>
                 <img src="{{asset('images/myanswer.webp')}}" alt="ongoing meeting"
-                     class="absolute w-10/12 top-16 left-12"/>
+                     class="absolute w-10/12 top-10 left-12"/>
             </div>
         </div>
     </div>
