@@ -44,7 +44,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 16px;
-    width: 90%
+    width: 100%
 }
 #post-content h2 {
     color: #A855F7;
@@ -52,6 +52,7 @@
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 5px;
+    width: 95%;
 }
 #post-content a {
     color: #C94013;
@@ -68,6 +69,7 @@
     color: #4C1D95;
     font-size: 18px;
     padding-bottom: 8px;
+    text-align: justify;
 }
 .social-share-buttons a {
     margin: 5px;
