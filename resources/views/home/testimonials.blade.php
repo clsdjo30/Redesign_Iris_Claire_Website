@@ -13,6 +13,7 @@ xl:px-20 px-10 py-20 gap-6">
                         <img
                             src="{{asset('images/avatar/woman_avatar_three.webp')}}"
                             alt="profile pictre"
+                            class="max-w-full  w-28 h-28"
                             width="112"
                             height="112"
                         />
@@ -20,11 +21,11 @@ xl:px-20 px-10 py-20 gap-6">
                             Sarh2803
                         </p>
                         <div class="flex">
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
                         </div>
                         <p
                             class="text-base font-semibold leading-4 my-2 text-yellow-600 group-hover:text-violet-500 text-center mt-5">
@@ -50,6 +51,7 @@ xl:px-20 px-10 py-20 gap-6">
                         <img
                             src="{{asset('images/avatar/woman_avatar_one.webp')}}"
                             alt="profile pictre"
+                            class="max-w-full  w-28 h-28"
                             width="112"
                             height="112"
                         />
@@ -57,11 +59,11 @@ xl:px-20 px-10 py-20 gap-6">
                             Emma
                         </p>
                         <div class="flex">
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
                         </div>
                         <p
                             class="text-base font-semibold leading-4 my-2  text-yellow-600 group-hover:text-violet-500 text-center mt-5">
@@ -88,6 +90,7 @@ xl:px-20 px-10 py-20 gap-6">
                         <img
                             src="{{asset('images/avatar/woman_avatar_two.webp')}}"
                             alt="profile pictre"
+                            class="max-w-full w-28 h-28"
                             width="112"
                             height="112"
                         />
@@ -95,11 +98,11 @@ xl:px-20 px-10 py-20 gap-6">
                             Patdu30
                         </p>
                         <div class="flex">
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
-                            <img src="{{asset('icons/star.webp')}}"  alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
+                            <img src="{{asset('icons/star.webp')}}" class="max-w-full w-4" alt="etoile" width="16" height="16"/>
                         </div>
                         <p
                             class="text-base font-semibold leading-4 my-2  text-yellow-600 group-hover:text-violet-500 text-center mt-5">
