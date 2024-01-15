@@ -19,8 +19,13 @@
             </h2>
 
             <div class="w-full flex justify-center lg:justify-start items-center">
-                <a href='https://play.google.com/store/apps/details?id=com.digitalFy.IrisClaireApp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                    <img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/>
+                <a href='https://play.google.com/store/apps/details?id=com.digitalFy.IrisClaireApp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                    class="flex justify-center"
+                >
+                    <img alt='Disponible sur Google Play'
+                         src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'
+                        class="w-2/4 lg:w-2/5 "
+                    />
                 </a>
             </div>
         </div>
