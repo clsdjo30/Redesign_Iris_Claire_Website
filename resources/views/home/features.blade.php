@@ -24,8 +24,14 @@
                         <p class="text-lg leading-none text-white mt-2">Evitez les pensées négatives
                             et éclairez votre chemin vers
                             le bonheur</p>
-                        <p class="mt-4 text-base font-medium cursor-pointer leading-4 underline text-white">
-                            Discover</p>
+                        <p class="mt-4">
+                            <a href='https://play.google.com/store/apps/details?id=com.digitalFy.IrisClaireApp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                               class="text-base font-medium cursor-pointer leading-4 underline text-orange-500"
+                               target="_blank"
+                            >
+                                Découvrez comment transformer votre vie
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="relative flex flex-col">
@@ -38,8 +44,14 @@
                         text-white">Est-ce le bon ?</h4>
                         <p class="text-lg leading-none text-white mt-2">Comment savoir si ma
                             nouvelle relation amoureuse est la bonne pour moi ?</p>
-                        <p class="mt-4 text-base font-medium cursor-pointer leading-4 underline text-white">
-                            Discover</p>
+                        <p class="mt-4">
+                            <a href='https://play.google.com/store/apps/details?id=com.digitalFy.IrisClaireApp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                               class="text-base font-medium cursor-pointer leading-4 underline text-orange-500"
+                               target="_blank"
+                            >
+                                Trouvez la clé d'une relation épanouissante
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="relative flex flex-col">
@@ -52,8 +64,14 @@
                         text-white">Épanouissement professionnel !</h4>
                         <p class="text-lg leading-none text-white mt-2">Comment m'y prendre pour
                             réussir à obtenir le poste que j'ai toujours désiré ?</p>
-                        <p class="mt-4 text-base font-medium cursor-pointer leading-4 underline text-white">
-                            Discover</p>
+                        <p class="mt-4">
+                            <a href='https://play.google.com/store/apps/details?id=com.digitalFy.IrisClaireApp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                               class="text-base font-medium cursor-pointer leading-4 underline text-orange-500"
+                               target="_blank"
+                            >
+                                Révélez le secret du succès professionnel
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
