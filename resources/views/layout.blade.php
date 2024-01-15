@@ -61,32 +61,19 @@
 
     </script>
 
-    <!-- Script Google Analytics-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('ANALYTICS_PROPERTY_ID') }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', '{{ env('ANALYTICS_PROPERTY_ID') }}');
-    </script>
-
 
     {{--    Cookies--}}
     @cookieconsentscripts
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11363532125">
-    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X368TYJZZ7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'AW-11363532125');
+        gtag('config', 'G-X368TYJZZ7');
     </script>
 </head>
 <body class="antialiased">
