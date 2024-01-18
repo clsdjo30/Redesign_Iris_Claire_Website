@@ -11,11 +11,15 @@ xl:px-20 px-10 py-20 gap-6">
                 <div class="relative -top-24 md:-top-28">
                     <div class="flex flex-col items-center justify-center">
                         <img
-                            src="{{asset('images/avatar/woman_avatar_three.webp')}}"
-                            alt="profile pictre"
-                            class="max-w-full  w-28 h-28"
-                            width="112"
-                            height="112"
+                            src="{{asset('images/avatar/woman_avatar_three@2x.webp')}}"
+                            srcset="{{ asset('images/avatar/woman_avatar_three@2x.webp') }} 560w,
+                                     {{ asset('images/avatar/woman_avatar_three@3x.webp') }} 1120w,
+                                     {{ asset('images/avatar/woman_avatar_three@4x.webp') }} 1680w,
+                                     {{ asset('images/avatar/woman_avatar_three@5x.webp') }} 2240w,
+                                     {{ asset('images/avatar/woman_avatar_three@5x.webp') }} 2800w"
+                            sizes="(max-width: 560px) 100vw, (max-width: 1120px) 50vw, (max-width: 1680px) 33vw, (max-width: 2240px) 100vw, 20vw"
+                            alt="profile picture"
+                            class="max-w-full w-28 h28"
                         />
                         <p class="text6base font-semibold leading-4 my-2 text-violet-800">
                             Sarh2803
@@ -49,11 +53,15 @@ xl:px-20 px-10 py-20 gap-6">
                 <div class="relative -top-24 md:-top-28">
                     <div class="flex flex-col items-center justify-center">
                         <img
-                            src="{{asset('images/avatar/woman_avatar_one.webp')}}"
+                            src="{{asset('images/avatar/woman_avatar_one@2x.webp')}}"
+                            srcset="{{ asset('images/avatar/woman_avatar_one@2x.webp') }} 560w,
+                                     {{ asset('images/avatar/woman_avatar_one@3x.webp') }} 1120w,
+                                     {{ asset('images/avatar/woman_avatar_one@4x.webp') }} 1680w,
+                                     {{ asset('images/avatar/woman_avatar_one@5x.webp') }} 2240w,
+                                     {{ asset('images/avatar/woman_avatar_one@5x.webp') }} 2800w"
+                            sizes="(max-width: 560px) 100vw, (max-width: 1120px) 50vw, (max-width: 1680px) 33vw, (max-width: 2240px) 100vw, 20vw"
                             alt="profile pictre"
-                            class="max-w-full  w-28 h-28"
-                            width="112"
-                            height="112"
+                            class=" w-28 h-28"
                         />
                         <p class="text6base font-semibold leading-4 my-2 text-violet-800">
                             Emma
@@ -88,11 +96,15 @@ xl:px-20 px-10 py-20 gap-6">
                 <div class="relative -top-24 md:-top-28">
                     <div class="flex flex-col items-center justify-center">
                         <img
-                            src="{{asset('images/avatar/woman_avatar_two.webp')}}"
+                            src="{{asset('images/avatar/woman_avatar_two@2x.webp')}}"
+                            srcset="{{ asset('images/avatar/woman_avatar_two@2x.webp') }} 560w,
+                                     {{ asset('images/avatar/woman_avatar_two@3x.webp') }} 1120w,
+                                     {{ asset('images/avatar/woman_avatar_two@4x.webp') }} 1680w,
+                                     {{ asset('images/avatar/woman_avatar_two@5x.webp') }} 2240w,
+                                     {{ asset('images/avatar/woman_avatar_two@5x.webp') }} 2800w"
+                            sizes="(max-width: 560px) 100vw, (max-width: 1120px) 50vw, (max-width: 1680px) 33vw, (max-width: 2240px) 100vw, 20vw"
                             alt="profile pictre"
-                            class="max-w-full w-28 h-28"
-                            width="112"
-                            height="112"
+                            class="w-28 h-28"
                         />
                         <p class="text6base font-semibold leading-4 my-2 text-violet-800">
                             Patdu30
